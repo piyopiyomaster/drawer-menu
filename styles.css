@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap'); /* フォントのインポート */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#slideshow {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    width: 300%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slides img {
+    width: 100vw;
+    height: 100vw; /* 正方形にするために高さも幅に合わせる */
+    object-fit: cover;
+}
+
+.dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 4px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #717171;
+}
+
+#notifications {
+    width: 80%;
+    overflow-y: auto;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    text-align: left;
+    height: 240px;
+    position: relative;
+}
+
+#notifications h2 {
+    text-align: center; /* タイトルを中央に配置 */
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+#notifications ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 30px 0;
+    width: 80%;
+    text-align: -webkit-center;
+}
+
+#notifications li {
+    margin: 5px 0;
+}
+
+.news-date {
+    color: #616d40; /* 日付の色をグレーに */
+    margin-right: 10px; /* 日付とタイトルの間にスペースを追加 */
+}
+
+.more-button-container {
+    text-align: center; /* ボタンを中央に配置 */
+    margin-top: 20px;
+}
+
+.more-button {
+    background-color: transparent;
+    color: #038320;
+    border-radius: 20px;
+    padding: 10px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    display: inline-block;
+    border: 1px solid #038320;
+}
+
+.more-button:hover {
+    background-color: #218838; /* ホバー時の色 */
+}
+
+#button-section {
+    background-color: #f2f3f2; /* セクション全体にグレーの背景色 */
+    padding: 20px;
+    width: 100vw;
+    margin-left: -10px;
+    margin-right: -10px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    text-align: center; /* タイトルを中央に配置 */
+    height: 340px;
+}
+
+#button-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+}
+
+#button-container button {
+    padding: 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #038320; /* ボタンの色 */
+    color: white;
+    cursor: pointer;
+    height: 90px;
+}
+
+#company-info {
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center; /* タイトルを中央に配置 */
+    background-color: #fff; /* 背景色を設定 (必要に応じて変更) */
+    border-radius: 8px; /* 角を少し丸める */
+}
+
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    margin-bottom: 20px;
+    margin-top: 0;
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+    display: block; /* タイトルの幅を文字の幅に合わせる */
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    border-bottom: 2px dotted #038320; /* 緑色の点線の下線 */
+    width: 140px;
+    margin: auto;
+}
