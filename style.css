@@ -32,27 +32,34 @@ header {
     transition: bottom 0.3s ease;
     border-radius: 20px 20px 0 0; /* 上部の左と右を丸くする */
     z-index: 1000;
-    padding: 20px;
-    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    padding: 20px;
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .drawer-handle {
-    width: 50px;
-    height: 5px;
+    width: 60px;
+    height: 6px;
     background-color: #ccc;
     border-radius: 10px;
-    margin: 0 auto;
-    margin-bottom: 15px;
+    margin: 0 auto 20px; /* 上部に位置させるためにマージン調整 */
+    margin-top: 10px; /* ドロワーメニューの上部に隙間を作る */
+}
+
+.drawer-menu nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
 .drawer-menu nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    width: 100%;
 }
 
 .drawer-menu nav ul li {
@@ -62,6 +69,12 @@ header {
 .drawer-menu nav ul li a {
     color: #333;
     text-decoration: none;
+    font-size: 18px; /* 大きめのフォントサイズ */
+    padding: 10px 20px; /* スマホで押しやすくするためのパディング */
+    display: block;
+    width: 100%;
+    text-align: center;
+    border-radius: 10px; /* リンクに丸みを持たせる */
 }
 
 .drawer-open {
