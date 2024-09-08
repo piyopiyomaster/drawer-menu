@@ -13,12 +13,47 @@ header {
     text-align: right;
 }
 
+/* メニューボタンのスタイル */
 .menu-button {
     background: none;
     border: none;
     color: white;
     font-size: 24px;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-button::before {
+    content: '';
+    display: block;
+    width: 8px; /* ボールの直径 */
+    height: 8px;
+    background-color: white;
+    border-radius: 50%; /* 円形にする */
+    margin: 2px 0; /* ボール間のスペース */
+}
+
+.menu-button::after {
+    content: '';
+    display: block;
+    width: 8px; /* ボールの直径 */
+    height: 8px;
+    background-color: white;
+    border-radius: 50%; /* 円形にする */
+    margin: 2px 0; /* ボール間のスペース */
+}
+
+/* 3つ目のボールも同様に */
+.menu-button span::before {
+    content: '';
+    display: block;
+    width: 8px; /* ボールの直径 */
+    height: 8px;
+    background-color: white;
+    border-radius: 50%; /* 円形にする */
+    margin: 2px 0; /* ボール間のスペース */
 }
 
 /* ドロワーメニューのスタイル */
