@@ -26,7 +26,7 @@ header {
     position: fixed;
     bottom: -100%; /* 初期状態ではメニューを非表示 */
     left: 0;
-    width: 100%;
+    right: 0;
     height: 300px;
     background-color: #fdfdf6; /* オフホワイト */
     transition: bottom 0.3s ease;
@@ -72,7 +72,6 @@ header {
     font-size: 18px; /* 大きめのフォントサイズ */
     padding: 10px 20px; /* スマホで押しやすくするためのパディング */
     display: block;
-    width: 100%;
     text-align: center;
     border-radius: 10px; /* リンクに丸みを持たせる */
 }
