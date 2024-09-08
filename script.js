@@ -1,23 +1,26 @@
-let currentSlide = 0;
-const slides = document.querySelector('.slides');
-const dots = document.querySelectorAll('.dot');
+// Reactへの移行を見越したクラスベースの設計
+class DrawerMenu {
+    constructor() {
+        this.menuButton = document.getElementById('menuButton');
+        this.drawerMenu = document.getElementById('drawerMenu');
+        this.isOpen = false;
 
-function showSlide(index) {
-    const totalSlides = dots.length;
-    currentSlide = (index + totalSlides) % totalSlides;
-    slides.style.transform = `translateX(-${currentSlide * 100}vw)`;
+        // メニューの開閉操作をバインド
+        this.toggleMenu = this.toggleMenu.bind(this);
+        this.menuButton.addEventListener('click', this.toggleMenu);
+    }
 
-    dots.forEach((dot, i) => {
-        dot.classList.toggle('active', i === currentSlide);
-    });
+    toggleMenu() {
+        if (this.isOpen) {
+            this.drawerMenu.classList.remove('drawer-open');
+        } else {
+            this.drawerMenu.classList.add('drawer-open');
+        }
+        this.isOpen = !this.isOpen;
+    }
 }
 
-function nextSlide() {
-    showSlide(currentSlide + 1);
-}
-
-dots.forEach((dot, index) => {
-    dot.addEventListener('click', () => showSlide(index));
+// ページが読み込まれたらDrawerMenuを初期化
+document.addEventListener('DOMContentLoaded', () => {
+    new DrawerMenu();
 });
-
-setInterval(nextSlide, 5000); // 3秒ごとにスライド
