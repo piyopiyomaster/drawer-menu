@@ -1,25 +1,55 @@
-// Reactへの移行がしやすいようにクラスベースの構造を利用
-class DrawerMenu {
-    constructor() {
-        this.menuButton = document.getElementById('menuButton');
-        this.drawerMenu = document.getElementById('drawerMenu');
-        this.isOpen = false;
-
-        this.handleMenuClick = this.handleMenuClick.bind(this);
-        this.menuButton.addEventListener('click', this.handleMenuClick);
-    }
-
-    handleMenuClick() {
-        if (this.isOpen) {
-            this.drawerMenu.classList.remove('drawer-open');
-        } else {
-            this.drawerMenu.classList.add('drawer-open');
-        }
-        this.isOpen = !this.isOpen;
-    }
+/* 基本スタイル */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-// DOMが読み込まれたらDrawerMenuを初期化
-document.addEventListener('DOMContentLoaded', () => {
-    new DrawerMenu();
-});
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: right;
+}
+
+.menu-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.drawer-menu {
+    position: fixed;
+    top: 0;
+    left: -250px; /* 初期状態ではメニューを非表示 */
+    width: 250px;
+    height: 100%;
+    background-color: #444;
+    transition: left 0.3s ease;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.drawer-menu nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.drawer-menu nav ul li {
+    margin: 15px 0;
+}
+
+.drawer-menu nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.drawer-open {
+    left: 0; /* メニューが開いている状態 */
+}
+
+main {
+    padding: 20px;
+}
