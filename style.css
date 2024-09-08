@@ -26,11 +26,11 @@ header {
 
 /* ミートボールアイコン */
 .menu-button div {
-    width: 12px; /* ボールの直径 */
-    height: 12px;
+    width: 5px;
+    height: 5px;
     background-color: white;
-    border-radius: 50%; /* 円形にする */
-    margin: 0 4px; /* ボール間のスペース */
+    border-radius: 50%;
+    margin: 0 2px;
 }
 
 /* ドロワーメニューのスタイル */
