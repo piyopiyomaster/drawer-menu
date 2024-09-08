@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webアプリ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <div id="slideshow">
+            <div class="slides">
+                <img src="images/image1.png" alt="Slide 1">
+                <img src="images/image2.png" alt="Slide 2">
+                <img src="images/image3.png" alt="Slide 3">
+            </div>
+            <div class="dots">
+                <span class="dot" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+            </div>
+        </div>
+
+        <div id="notifications">
+            <h2 class="section-title">NEWS</h2>
+            <ul>
+                <li><span class="news-date">2024-08-28</span> お知らせタイトル1</li>
+                <li><span class="news-date">2024-08-27</span> お知らせタイトル2</li>
+                <li><span class="news-date">2024-08-26</span> お知らせタイトル3</li>
+            <!-- 他のお知らせも追加可能 -->
+            </ul>
+             <div class="more-button-container">
+                <button class="more-button">もっと見る</button>
+             </div>
+        </div>
+
+        <div id="button-section">
+            <h2 class="section-title">PORTAL</h2>
+            <div id="button-container">
+                <button>サイト1</button>
+                <button>サイト2</button>
+                <button>サイト3</button>
+                <button>アプリ1</button>
+                <button>アプリ2</button>
+                <button>ページ1</button>
+            </div>
+        </div>
+
+        <div id="company-info">
+            <h2 class="section-title">CONTACT</h2>
+            <p>会社名: 株式会社Example</p>
+            <p>住所: 東京都新宿区123-456</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
